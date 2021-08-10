@@ -1,5 +1,6 @@
 {
     "workbench.iconTheme": "vscode-icons",
-    "workbench.colorTheme": "Dracula",
-    "editor.fontSize": 16
+    "workbench.colorTheme": "Horizon Bold",
+    "editor.fontSize": 18,
+    "window.zoomLevel": 0.5
 }
