@@ -17,7 +17,7 @@
                 John's weights 85 kg and is 1.76 m tall.
 */
 
-let markWeight, markHeight;
+/*let markWeight, markHeight;
 let johnWeight, johnHeight;
 let markHigherBMI;
 
@@ -40,13 +40,69 @@ console.log("Mark's Weight : " + markWeight + " Mark's Height : " + markHeight);
 console.log("John's Weight : " + johnWeight + " John's Height : " + johnHeight);
 console.log("Mark's BMI = " + markBMI);
 console.log("John's BMI = " + johnBMI);
-console.log("Is Mark's BMI higher than John's ? " + markHigherBMI);
+console.log("Is Mark's BMI higher than John's ? " + markHigherBMI); */
 
 /////////////////////////////////////
 // Coding Challenge #2
 
-if(markBMI > johnBMI) console.log(`Mark's BMI is higher than John's`);
+/*if(markBMI > johnBMI) console.log(`Mark's BMI is higher than John's`);
 else console.log(`John's BMI is higher than Mark's`);
 
 if(markBMI > johnBMI) console.log(`Mark's BMI ${markBMI} is higher than John's ${johnBMI}!`);
-else console.log(`John's BMI ${johnBMI} is higher than Mark's ${markBMI}`);
+else console.log(`John's BMI ${johnBMI} is higher than Mark's ${markBMI}`); */
+
+/////////////////////////////////////
+// Coding Challenge #3
+
+/* 
+  1. Calculate the avereage score for each team, using the test data below
+  2. Compare the team's average scores to determine the winner of the competition, and print it to the console. Don't forget that there can be a draw, so test for that as well (draw means they have the same average score).
+
+  3. BONUS 1: Include a requirement for a minimum score of 100. With this rule, a team only wins if it has a higher score than the other team, and the same time a score at least 100 points. HINT: Use a logical operator to test for minimum score, as well as multiple else-if blocks
+  4. BONUS 2: Minimum score also applies to a draw! So a draw only happens when both teams have the same score and both have a score greater or equal 100 points. Otherwise, no team wins the tropy.
+
+  TEST DATA :
+    1.) DOLPHINS score 96, 108 and 89.
+        KOALAS score 88, 91, and 110
+  TEST DATA BONUS :
+    1.) DOLPHINS score 97, 112 and 101.
+        KOALAS score 109, 95, and 123
+    2.) DOLPHINS score 97, 112 and 101.
+        KOALAS score 109, 95, and 106
+*/
+
+const dolphinsScore = ((97 + 112 + 101)/3);
+const koalasScore = ((109 + 95 + 106)/3);
+
+if(dolphinsScore > koalasScore) {
+  console.log(`Dolphins Score : ${dolphinsScore} | Koalas Score : ${koalasScore}`);
+  console.log(`Dolphins are the winner!!`);
+} else if(koalasScore > dolphinsScore) {
+  console.log(`Dolphins Score : ${dolphinsScore} | Koalas Score : ${koalasScore}`);
+  console.log(`Koalas are the winner!!`);
+} else {
+  console.log(`Dolphins Score : ${dolphinsScore} | Koalas Score : ${koalasScore}`);
+  console.log(`DRAW!!`);
+}
+
+if(dolphinsScore > 100 && koalasScore > 100) {
+  if(dolphinsScore > koalasScore) {
+    console.log(`Dolphins Score : ${dolphinsScore} | Koalas Score : ${koalasScore}`);
+    console.log(`Dolphins are the winner!!`);
+  } else if(koalasScore > dolphinsScore) {
+    console.log(`Dolphins Score : ${dolphinsScore} | Koalas Score : ${koalasScore}`);
+    console.log(`Koalas are the winner!!`);
+  } else {
+    console.log(`Dolphins Score : ${dolphinsScore} | Koalas Score : ${koalasScore}`);
+    console.log(`DRAW!!`);
+  }
+} else if(!(dolphinsScore > 100) && koalasScore > 100) {
+  console.log(`Dolphins Score : ${dolphinsScore} | Koalas Score : ${koalasScore}`);
+  console.log(`Koalas are the winner!!`);
+} else if(dolphinsScore > 100 && !(koalasScore > 100)) {
+  console.log(`Dolphins Score : ${dolphinsScore} | Koalas Score : ${koalasScore}`);
+  console.log(`Dolphins are the winner!!`);
+} else {
+  console.log(`Dolphins Score : ${dolphinsScore} | Koalas Score : ${koalasScore}`);
+  console.log(`No Team Wins The Tropy!!`);
+}
