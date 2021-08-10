@@ -30,40 +30,40 @@ console.log(firstName); */ // akhir
 
 ///////////////////////////////////////////
 // Operators
-let x = 0;
-let y = 0;
+/*let x = 0;
+let y = 0;*/
 
-function postIncrement() {
+/*function postIncrement() {
     while(x < 3) {
         y = x++; // nilai pada x (Global Scope) akan terupdate
         // console.log("y = " + y);
     }
     x++; // nilai pada x (Global Scope) akan terupdate
-}
+}*/
 // postIncrement();
 // console.log("x = " + x);
 
-function preIncrement() {
+/*function preIncrement() {
     while(x < 3) {
         y = ++x;
         // console.log("y = " + y);
     }
     // ++x;
-}
-preIncrement();
+}*/
+// preIncrement();
 // console.log("x = " + x++);
 // console.log("x = " + x);
 
 
 ///////////////////////////////////////////
 // Template Literals
-const firstName = 'Fidelis Raymond';
+/*const firstName = 'Fidelis Raymond';
 const lastName = 'Jose Airudin';
 const yearOfBrith = 2000;
-const job = 'Student';
+const job = 'Student'; */
 
 // console.log("Hello my name is " + firstName + ", I'am a " + (2021 - yearOfBrith) + " years old " + job);
-const fidelis = `Hello my name is ${firstName + ' ' + lastName}, I'am a ${2021-yearOfBrith} years old ${job}`;
+/*const fidelis = `Hello my name is ${firstName + ' ' + lastName}, I'am a ${2021-yearOfBrith} years old ${job}`;
 console.log(fidelis);
 
 const kata = 'Ini baris pertama \n\
@@ -77,4 +77,25 @@ console.log(kata2);
 const kata3 = `Ini baris 1
 Ini baris 2
 Ini baris 3`;
-console.log(kata3);
+console.log(kata3);*/
+
+///////////////////////////////////////////
+// Type Conversion and Coercion
+
+/* Note :
+    Type Coercion adalah proses mengubah tipe data sebuah nilai
+    ke tipe data yang lain secara otomatis atau implisit.
+    
+    This includes conversion from Number to String, String to Number, Boolean to Number etc. when different types of operators are applied to the values.
+*/
+
+const teks = '5';
+const angka = Number(teks); // Mengubah teks '5' (tipe data String) menjadi sebuah angka 5 (tipe data Number)
+
+console.log(angka, typeof angka);
+console.log(teks , typeof teks);
+
+console.log(('5' + '5')/ 55); // Hasilnya → 1 (tipe datanya Number)
+console.log(('5' + '5' - '20') + 5); // Hasilnya → 40 (tipe datanya Number)
+
+console.log(`saya suka nonton bioskop di` + ` ` + `21` - `11`);
