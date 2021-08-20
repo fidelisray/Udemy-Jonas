@@ -1,6 +1,20 @@
 {
     "workbench.iconTheme": "vscode-icons",
     "workbench.colorTheme": "Horizon Bold",
-    "editor.fontSize": 18,
-    "window.zoomLevel": 0.5
+    "editor.fontSize": 16,
+    "window.zoomLevel": 0.5,
+    "workbench.colorCustomizations": {
+        // "tab.activeBorder": "#44fa9f",
+        "tab.activeBorder": "#ffd900",
+        "tab.activeBackground": "#111018",
+        "tab.inactiveForeground": "#ffd900",
+        "tab.activeForeground": "#ffd900",
+        "editor.background": "#111018",
+        "editorLineNumber.activeForeground": "#0059ff",
+        "editorIndentGuide.activeBackground": "#44fa9f",
+        "activityBar.background": "#111018",
+        "activityBar.foreground": "#ffd900",
+        "statusBar.background": "#111018",
+        "editorLineNumber.foreground": "#fff"
+    }
 }
