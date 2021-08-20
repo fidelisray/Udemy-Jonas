@@ -152,3 +152,35 @@ console.log(`Total  : ${finalValue}`);*/
 /////////////////////////////////////
 // Coding Challenge #5
 
+/*
+  Back to the two gmnastics teams, the Dolphins and the Koalas! There is a new gymnastics discipline, wich works differently.
+  Each team competes 3 times, and then the average of the 3 scores is calculated (so one average score per team).
+  A team ONLY wins if it has at least DOUBLE the average score of the other team. Otherwise, no team wins!
+
+  Task:
+  1. Create an arrow function 'calcAverage' to calculate the average of 3 scores.
+  2. Use the function to calculate the average for both teams.
+  3. Create a function 'checkWinner' that takes the average score of each teams as parameters ('avgDolphins' and 'avgKoalas'), and then logs the winner to the console, together with the victory points, according to the rule above. Example: "Koalas win (30 vs. 13)".
+  4. Use the 'checkWinner' function to determine the winner for both DATA 1 and DATA 2.
+  5. Ignore draws this time.
+
+  TEST DATA 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49.
+  TEST DATA 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27.
+*/
+
+const calcAverage = scores => scores / 3;
+const checkWinner = (avgDolphins, avgKoalas) => {
+  if (avgDolphins / 2 >= avgKoalas) {
+    return `Dophins wins (${avgDolphins} vs ${avgKoalas})`;
+  } else if (avgKoalas / 2 >= avgDolphins) {
+    return `Koalas wins (${avgKoalas} vs ${avgDolphins})`;
+  } else {
+    return `No one wins (Dolphins: ${avgDolphins}, Koalas: ${avgKoalas})`;
+  }
+}
+
+// const dolphins = calcAverage(44 + 23 + 71);
+// const koalas = calcAverage(65 + 54 + 49);
+const dolphins = calcAverage(85 + 54 + 41);
+const koalas = calcAverage(23 + 34 + 27);
+console.log(checkWinner(dolphins,koalas));
