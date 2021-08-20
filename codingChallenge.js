@@ -71,7 +71,7 @@ else console.log(`John's BMI ${johnBMI} is higher than Mark's ${markBMI}`); */
         KOALAS score 109, 95, and 106
 */
 
-const dolphinsScore = ((97 + 112 + 101)/3);
+/*const dolphinsScore = ((97 + 112 + 101)/3);
 const koalasScore = ((109 + 95 + 106)/3);
 
 if(dolphinsScore > koalasScore) {
@@ -105,4 +105,50 @@ if(dolphinsScore > 100 && koalasScore > 100) {
 } else {
   console.log(`Dolphins Score : ${dolphinsScore} | Koalas Score : ${koalasScore}`);
   console.log(`No Team Wins The Tropy!!`);
-}
+} */
+
+/////////////////////////////////////
+// Conditional Challenge
+
+// let day = prompt('Masukkan Hari...');
+
+// if (day === 'Monday') {
+//   console.log('Belajar Javascript (Udemy)');
+// } else if (day === 'Tuesday') {
+//   console.log('Belajar Javascript (Youtube / WPU)');
+// } else if (day === 'Wednesday' || day === 'Thursday') {
+//   console.log('Belajar Javascript & Bahasa Jepang');
+// } else if (day === 'Friday') {
+//   console.log('Mencari & membaca jurnal');
+// } else if (day === 'Saturday' || day === 'Sunday') {
+//   console.log('Istirahat');
+// } else {
+//   console.log('Hari yang anda masukkan tidak Valid!!');
+// }
+
+/////////////////////////////////////
+// Coding Challenge #4
+
+/*
+  Fidelis wants to build a very simple tip calculator for whenever he goes eating in a restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
+
+  1. Your task is to calculate the tip, depending on the bill value. Create variable called 'tip' for this. It's not allowed to use an if/else statements (if it's easier for you, you can start with if/else statement, and then try to convert it to a ternary operator!)
+  2. Print a string to the console containing the bill value, the tip, and the final value (bill + tip).
+  Example: 'The bill was 275 the tip was 41.25, and the total value 316.25'
+
+  TEST DATA: Test for bill values 275, 40 and 430
+*/
+
+// let bill = 275;
+/*
+let bill = Number(prompt('Insert the bill : '));
+let tip = bill * (bill > 50 && bill < 300 ? 15*(1/100) : 20*(1/100));
+let finalValue = bill + tip;
+
+console.log(`Bill   : ${bill}`);
+console.log(`Tip    : ${tip}`);
+console.log(`Total  : ${finalValue}`);*/
+
+/////////////////////////////////////
+// Coding Challenge #5
+
