@@ -1,3 +1,4 @@
+'use strict';
 // let js = "amazing";
 // // if (js === "amazing") alert("JS is AWSOME!");
 
@@ -125,7 +126,7 @@ else console.log(`height is UNDEFINED`);*/
 
 ///////////////////////////////////////////
 // Switch Statements
-
+/*
 let day = 'wednesday';
 
 switch (day) {
@@ -148,4 +149,65 @@ switch (day) {
         break;
     default:
         console.log('Hari yang anda masukkan TIDAK VALID!!');
+} */
+
+///////////////////////////////////////////
+// Array
+
+const friends = new Array('Marc', 'Jack', 'Piter');
+console.log(friends);
+
+// for(let i = 0; i < friends.length; i++) {
+//     console.log(friends[i]);
+// }
+/*
+    i = 0 (i < 3): True => cetak
+    i = 1 (i < 3): True => cetak
+    i = 2 (i < 3): True => cetak
+    i = 3 (i < 3): False => exit
+*/
+// console.log(friends[friends.length]);
+// friends[3] = 'Fidelis';
+// console.log(friends);
+// friends[2] = 'Michael';
+// console.log(friends);
+
+const years = [1990, 1967, 2002, 2010, 2018];
+
+const calcAge = birthyear => 2037 - birthyear;
+
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
+
+console.log(age1, age2, age3);
+
+const ages = new Array();
+for(let i = 0; i < years.length; i++) {
+    ages[i] = calcAge(years[i]);
 }
+console.log(ages);
+
+///////////////////////////////////////////
+// Basic Array Operations (Methods)
+
+// Add elements
+let newLength = friends.push('Bambang');
+console.log(friends);
+console.log(newLength);
+
+// console.log('----------------------');
+newLength = friends.unshift('Martin');
+console.log(friends);
+console.log(newLength);
+
+// Remove elements
+friends.pop() // Remove LAST elements of array
+let popped;
+console.log(friends);
+popped = friends[friends.length - 1] = friends.pop();
+console.log(`Popped: ${popped}`);
+console.log(friends);
+
+friends.shift() // Remove FIRST elements of array
+console.log(friends);
