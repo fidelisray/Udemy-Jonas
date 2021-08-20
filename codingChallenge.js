@@ -168,6 +168,7 @@ console.log(`Total  : ${finalValue}`);*/
   TEST DATA 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27.
 */
 
+/*
 const calcAverage = scores => scores / 3;
 const checkWinner = (avgDolphins, avgKoalas) => {
   if (avgDolphins / 2 >= avgKoalas) {
@@ -177,10 +178,42 @@ const checkWinner = (avgDolphins, avgKoalas) => {
   } else {
     return `No one wins (Dolphins: ${avgDolphins}, Koalas: ${avgKoalas})`;
   }
-}
+}*/
 
 // const dolphins = calcAverage(44 + 23 + 71);
 // const koalas = calcAverage(65 + 54 + 49);
-const dolphins = calcAverage(85 + 54 + 41);
-const koalas = calcAverage(23 + 34 + 27);
-console.log(checkWinner(dolphins,koalas));
+// const dolphins = calcAverage(85 + 54 + 41);
+// const koalas = calcAverage(23 + 34 + 27);
+// console.log(checkWinner(dolphins,koalas));
+
+/////////////////////////////////////
+// Coding Challenge #6
+
+/*
+  Fidelis is still building his tip calculator, using the same rules as before: Tip 15% of the bill if the value is between 50 and 300, and if the value is different, the tip is 20%.
+
+  Task:
+  1. Write a function 'calcTip' that takes any bill value as an input and returns the corresponding tip, calculated based on the rules above (you can check out the code from first tip calculator challenge if you need to). Use the function type you like the most. Test the function using a bill value of 100.
+  2. And now let's use arrays! so create an array 'bills' containing the test data below.
+  3. Create an array 'tips' containing the tip value for each bill, calculated  from the function you created before.
+  4. BONUS: Create an array 'total' containing the total values, so bill + tip.
+
+  TEST DATA: 125, 555 and 44
+*/
+
+const calcTip = bill => {
+  if (bill > 50 && bill < 300) {
+    return 0.15 * bill;
+  } else {
+    return 0.2 * bill;
+  }
+}
+const calcTip2 = bill => bill >= 50 && bill <= 300 ? 0.15 * bill : 0.2 * bill; 
+// console.log(calcTip(10));
+
+const bills = [125, 555, 44];
+const tips = [calcTip2(bills[0]), calcTip2(bills[1]), calcTip2(bills[bills.length - 1])];
+const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+console.log(tips);
+console.log(total);
