@@ -154,8 +154,9 @@ switch (day) {
 ///////////////////////////////////////////
 // Array
 
+/*
 const friends = new Array('Marc', 'Jack', 'Piter');
-console.log(friends);
+console.log(friends); */
 
 // for(let i = 0; i < friends.length; i++) {
 //     console.log(friends[i]);
@@ -172,6 +173,7 @@ console.log(friends);
 // friends[2] = 'Michael';
 // console.log(friends);
 
+/*
 const years = [1990, 1967, 2002, 2010, 2018];
 
 const calcAge = birthyear => 2037 - birthyear;
@@ -186,12 +188,13 @@ const ages = new Array();
 for(let i = 0; i < years.length; i++) {
     ages[i] = calcAge(years[i]);
 }
-console.log(ages);
+console.log(ages);*/
 
 ///////////////////////////////////////////
 // Basic Array Operations (Methods)
 
 // Add elements
+/* FIRST
 let newLength = friends.push('Bambang');
 console.log(friends);
 console.log(newLength);
@@ -210,4 +213,38 @@ console.log(`Popped: ${popped}`);
 console.log(friends);
 
 friends.shift() // Remove FIRST elements of array
-console.log(friends);
+console.log(friends); LAST */
+
+///////////////////////////////////////////
+// Introduction to Object
+
+// Key = Property of Object
+const fidelis = {
+    firstName: 'Fidelis Raymond',
+    lastName: 'Jose Airudin',
+    age: 2021 - 2000,
+    job: 'Student',
+    friends: ['Marc', 'Martin', 'Alex']
+};
+
+// console.log(fidelis);
+// console.log(fidelis['friends'][1]);
+// console.log(fidelis.lastName);
+// console.log(fidelis['lastName']);
+
+// const nameKey = 'Name';
+
+// console.log(fidelis['first' + nameKey]);
+// console.log(fidelis['last' + nameKey]);
+
+// const interestedIn = prompt('What do you want to know about Fidelis? Choose between firstName, lastName, age, job, and friends');
+
+// console.log(fidelis[interestedIn]);
+
+// if(fidelis[interestedIn]) {
+//     console.log(fidelis[interestedIn]);
+// } else {
+//     alert(`${interestedIn} is dosen't exist. Wrong request!!`);
+// }
+
+// console.log(`${fidelis.firstName} has ${fidelis.friends.length} friends, and his best friend is called ${fidelis.friends[0]}`);
