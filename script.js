@@ -219,13 +219,13 @@ console.log(friends); LAST */
 // Introduction to Object
 
 // Key = Property of Object
-const fidelis = {
-    firstName: 'Fidelis Raymond',
-    lastName: 'Jose Airudin',
-    age: 2021 - 2000,
-    job: 'Student',
-    friends: ['Marc', 'Martin', 'Alex']
-};
+// const fidelis = {
+//     firstName: 'Fidelis Raymond',
+//     lastName: 'Jose Airudin',
+//     age: 2021 - 2000,
+//     job: 'Student',
+//     friends: ['Marc', 'Martin', 'Alex']
+// };
 
 // console.log(fidelis);
 // console.log(fidelis['friends'][1]);
@@ -247,4 +247,31 @@ const fidelis = {
 //     alert(`${interestedIn} is dosen't exist. Wrong request!!`);
 // }
 
+// Challenge
 // console.log(`${fidelis.firstName} has ${fidelis.friends.length} friends, and his best friend is called ${fidelis.friends[0]}`);
+
+
+const fidelis = {
+    firstName: 'Fidelis Raymond',
+    lastName: 'Jose Airudin',
+    birthYear: 2000,
+    job: 'Student',
+    friends: ['Marc', 'Martin', 'Alex'],
+    calcAge: function(yearNow) {
+        this.age = yearNow - this.birthYear 
+        return this.age;
+    },
+    // hasDriverLicense: this.calcAge(2021) > 18 ? true : false,
+    // summary: () => {
+    //     return `${this.firstName} is a ${this.fidelis}-years old ${this.job}, and ${this.hasDriverLicense ? "he has a driver's license" : "he doesn't have driver's license"}`;
+    // }
+    getSummary: function() {
+        this.calcAge(2021);
+        return `${this.firstName} is a ${this.age}-years old ${this.job}, and ${this.age > 18 ? "he has a driver's license" : "he doesn't have a driver's license"}`;
+    }
+};
+
+// console.log(fidelis.calcAge(2022));
+// console.log(fidelis.age);
+
+console.log(fidelis.getSummary());

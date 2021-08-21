@@ -10,11 +10,13 @@
         "tab.inactiveForeground": "#ffd900",
         "tab.activeForeground": "#ffd900",
         "editor.background": "#111018",
-        "editorLineNumber.activeForeground": "#0059ff",
-        "editorIndentGuide.activeBackground": "#44fa9f",
+        // "editorLineNumber.activeForeground": "#0059ff",
+        "editorLineNumber.activeForeground": "#ff46b2",
+        // "editorIndentGuide.activeBackground": "#44fa9f",
+        "editorIndentGuide.activeBackground": "#ffd900",
         "activityBar.background": "#111018",
         "activityBar.foreground": "#ffd900",
         "statusBar.background": "#111018",
-        "editorLineNumber.foreground": "#fff"
+        "editorLineNumber.foreground": "#ffe900"
     }
 }
