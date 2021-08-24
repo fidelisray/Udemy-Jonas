@@ -251,27 +251,77 @@ console.log(friends); LAST */
 // console.log(`${fidelis.firstName} has ${fidelis.friends.length} friends, and his best friend is called ${fidelis.friends[0]}`);
 
 
-const fidelis = {
-    firstName: 'Fidelis Raymond',
-    lastName: 'Jose Airudin',
-    birthYear: 2000,
-    job: 'Student',
-    friends: ['Marc', 'Martin', 'Alex'],
-    calcAge: function(yearNow) {
-        this.age = yearNow - this.birthYear 
-        return this.age;
-    },
-    // hasDriverLicense: this.calcAge(2021) > 18 ? true : false,
-    // summary: () => {
-    //     return `${this.firstName} is a ${this.fidelis}-years old ${this.job}, and ${this.hasDriverLicense ? "he has a driver's license" : "he doesn't have driver's license"}`;
-    // }
-    getSummary: function() {
-        this.calcAge(2021);
-        return `${this.firstName} is a ${this.age}-years old ${this.job}, and ${this.age > 18 ? "he has a driver's license" : "he doesn't have a driver's license"}`;
-    }
-};
+// const fidelis = {
+//     firstName: 'Fidelis Raymond',
+//     lastName: 'Jose Airudin',
+//     birthYear: 2000,
+//     job: 'Student',
+//     friends: ['Marc', 'Martin', 'Alex'],
+//     calcAge: function(yearNow) {
+//         this.age = yearNow - this.birthYear 
+//         return this.age;
+//     },
+//     // hasDriverLicense: this.calcAge(2021) > 18 ? true : false,
+//     // summary: () => {
+//     //     return `${this.firstName} is a ${this.fidelis}-years old ${this.job}, and ${this.hasDriverLicense ? "he has a driver's license" : "he doesn't have driver's license"}`;
+//     // }
+//     getSummary: function() {
+//         this.calcAge(2021);
+//         return `${this.firstName} is a ${this.age}-years old ${this.job}, and ${this.age > 18 ? "he has a driver's license" : "he doesn't have a driver's license"}`;
+//     }
+// };
 
 // console.log(fidelis.calcAge(2022));
 // console.log(fidelis.age);
 
-console.log(fidelis.getSummary());
+// console.log(fidelis.getSummary());
+
+///////////////////////////////////////////
+// for Loop (iteration)
+
+// for(let i = 0; i < 30; i++) {
+//     console.log(`Iteration ${i + 1}`);
+// }
+
+const fidelis = [
+    'fidelis raymond',
+    'jose airudin',
+    21,
+    [
+        'sparky',
+        'marc',
+        'martin'
+    ]
+];
+const type = new Array();
+// console.log(fidelis);
+
+for (let i = 0; i < fidelis.length; i++) {
+    // console.log(fidelis[i], typeof fidelis[i]);
+}
+
+for (let i = 0; i < fidelis.length; i++) {
+    if (typeof fidelis[i] === "number") break;
+    // console.log(fidelis[i]);
+}
+
+for (let i = 0; i < fidelis.length; i++) {
+    type[i] = typeof fidelis[i];
+    // type.push(typeof fidelis[i]);
+}
+
+// console.log(type);
+
+for (let i = 0; i < fidelis.length; i++) {
+    if (typeof fidelis[i] == 'object') {
+        for (let j = 0; j < fidelis[i].length; j++) {
+            console.log(`Rj's friends ${j + 1}: ${fidelis[i][j]}`);
+        }
+    }
+}
+
+let i = 0;
+while (i < fidelis.length) {
+    console.log(`i: ${i}, ${fidelis[i]}`);
+    i++;
+}
