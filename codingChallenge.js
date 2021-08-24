@@ -232,24 +232,77 @@ const checkWinner = (avgDolphins, avgKoalas) => {
     mark's weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
 */
 
-const mark = {
-  fullName: 'Mark Miller',
-  mass: 55,
-  height: 1.75,
-  calcBMI: function() {
-    this.BMI = this.mass / (this.height ** 2);
-    return this.BMI;
-  }
-};
+// const mark = {
+//   fullName: 'Mark Miller',
+//   mass: 55,
+//   height: 1.75,
+//   calcBMI: function() {
+//     this.BMI = this.mass / (this.height ** 2);
+//     return this.BMI;
+//   }
+// };
 
-const john = {
-  fullName: 'John Smith',
-  mass: 92,
-  height: 1.95,
-  calcBMI: function() {
-    this.BMI = this.mass / (this.height ** 2);
-    return this.BMI;
-  }
-};
+// const john = {
+//   fullName: 'John Smith',
+//   mass: 92,
+//   height: 1.95,
+//   calcBMI: function() {
+//     this.BMI = this.mass / (this.height ** 2);
+//     return this.BMI;
+//   }
+// };
 
-console.log(`${mark.calcBMI() > john.calcBMI() ? `Mark's BMI (${mark.BMI}) is higher than John's (${john.BMI})` : `John's BMI (${john.BMI}) is higher than Mark's (${mark.BMI})`}`);
+// console.log(`${mark.calcBMI() > john.calcBMI() ? `Mark's BMI (${mark.BMI}) is higher than John's (${john.BMI})` : `John's BMI (${john.BMI}) is higher than Mark's (${mark.BMI})`}`);
+
+/////////////////////////////////////
+// Coding Challenge #8
+
+/*
+  Let's improve Fidel's tip calculator even more, this time using loops!
+
+  1. Create Array 'bills' containing all 10 test bill values
+  2. Create empty arrays for the tips and the totals ('tips' and 'totals')
+  3. Use the 'calcTip' function to calculate tips and total values (bill + tip) for every bill value in the bills array. Use a for loop to perform the 10 calculations!
+
+  TEST DATA: 22, 295, 176, 440, 37, 105, 10, 1100, 86, and 52
+
+  HINT: call calcTip in the loop and use the push method to add values to the tips and totals arrays
+
+  4. BONUS: Write a function 'calcAverage' which takes an array called 'arr' as an argument. This function calculates the average of all numbers in the given array. This is a DIFFICULT challenge (we haven't done this before)! Here is how 
+*/
+
+const calcTip = bill => {
+  if (bill > 50 && bill < 300) {
+    return 0.15 * bill;
+  } else {
+    return 0.2 * bill;
+  }
+}
+const calcTip2 = bill => bill >= 50 && bill <= 300 ? 0.15 * bill : 0.2 * bill; 
+// console.log(calcTip(10));
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = new Array();
+const totals = new Array();
+
+for (let i = 0; i < bills.length; i++) {
+  tips.push(calcTip(bills[i]));
+  totals.push(bills[i] + tips[i]);
+}
+
+console.log(bills);
+console.log(tips);
+console.log(totals);
+
+const calcAverage = function(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum / arr.length;
+}
+
+const test = [1,2,3];
+
+console.log(`Average: ${calcAverage(totals)}`);
+console.log(`Average: ${calcAverage(tips)}`);
